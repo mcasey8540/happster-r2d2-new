@@ -13,10 +13,10 @@ var minifyCss = require('gulp-minify-css');
 gulp.task('webserver', function() {
     gulp.src('.')
       .pipe(webserver({
-          port: 8001,
+          port: 3000,
           livereload: true,
           directoryListing: false,
-          open: "http://localhost:8001/index.html"
+          open: "http://localhost:3000/index.html"
       }));
 });
 
