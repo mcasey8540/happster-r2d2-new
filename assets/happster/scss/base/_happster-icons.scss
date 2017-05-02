@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'happster';
+  src:  url('/assets/happster/fonts/happster-icons.eot');
+  src:  url('/assets/happster/fonts/happster-icons.eot#iefix') format('embedded-opentype'),
+    url('/assets/happster/fonts/happster-icons.ttf') format('truetype'),
+    url('/assets/happster/fonts/happster-icons.woff') format('woff'),
+    url('/assets/happster/fonts/happster-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*****************************************/
+/*          CUSTOM ICONS                 */
+/*****************************************/
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'happster' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: .9em;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heroes-icon:before, .icon-Qhub-icon:before, .icon-feedback-icon:before {
+	display: inline-block;
+    font-family: "happster";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/** icon codes **/
+
+.icon-feedback:before {
+  content: "\e904";
+}
+
+// .icon-sort-by-2:before {
+//   content: "\e901";
+// }
+
+.icon-sort-by:before {
+  content: "\e901";
+  font-size: 21px !important;
+}
+
+.icon-qhub-answer:before {
+  content: "\e90e";
+}
+
+.icon-qhub-up-vote:before {
+  content: "\e90f";
+}
+
+.icon-qhub:before {
+  content: "\e903";
+}
+
+.icon-badge-hero:before {
+  content: "\e910";
+}
+
+.icon-badge-mvp:before {
+  content: "\e911";
+}
+
+.icon-badge-qhub:before {
+  content: "\e912";
+}
+
+.icon-happster-comment:before {
+  content: "\e902";
+}
+
+.icon-global:before {
+  content: "\e905";
+}
+
+.icon-hero-like-notification:before {
+  content: "\e906";
+}
+
+.icon-feedback-follows-anonymous-notifications:before {
+  content: "\e907";
+}
+
+.icon-hero-nomination-notification:before {
+  content: "\e908";
+}
+
+.icon-upvote-notification .path1:before {
+  content: "\e90a";
+  color: #54c5c9;
+}
+.icon-upvote-notification .path2:before {
+  content: "\e90a";
+  color: #54c5c9;
+  margin-left: -0.984375em;
+}
+.icon-upvote-notification .path3:before {
+  content: "\e90a";
+  color: #54c5c9;
+  margin-left: -0.984375em;
+}
+.icon-upvote-notification .path4:before {
+  content: "\e90a";
+  color: #9675f7;
+  margin-left: -0.984375em;
+}
+
+.icon-anonymous:before {
+  content: "\e900";
+}
+
+.icon-negative:before {
+  content: "\e913";
+}
+
+.icon-neutral:before {
+  content: "\e914";
+}
+
+.icon-positive:before {
+  content: "\e915";
+}
+
+.icon-upvote-outline:before {
+  content: "\e916";
+}
+
+.icon-hamburger:before {
+  content: "\e917";
+}
+
+.icon-upvote:before {
+  content: "\e918";
+}
+
+.icon-heroes:before {
+  content: "\e919";
+}
+
+
+
+/* icon styles */
+
+.input-icon > i {
+  margin: 14px 2px 4px 10px;
+  color: $icon-color;
+  opacity: .5;
+}
+
+.fa-chevron-right {
+  padding-left: 5px;
+  font-size: 13px !important;
+}
+
+.fa-chevron-left {
+  padding-right: 5px;
+  font-size: 13px !important;
+}
+
+// notifications 
+
+.badge {
+  height: 17px;
+}
+
+.badge-top-level {
+  right: 42px !important;
+  top: 9px !important;
+}
