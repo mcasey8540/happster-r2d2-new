@@ -111,12 +111,37 @@ MetronicApp.controller('FooterController', ['$scope', function($scope) {
 /* Setup Rounting For All Pages */
 MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     // Redirect any unmatched url
-    $urlRouterProvider.otherwise("/dashboard.html");  
+    $urlRouterProvider.otherwise("/home/dashboard.html");  
 
     $stateProvider
 
         // Dashboard
-        .state('dashboard', {
+        .state('home', {
+            url: "/home",
+            templateUrl: "views/home.html",            
+            data: {pageTitle: 'Admin Dashboard Template'},
+            abstract: true,
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                        files: [
+                            '../assets/global/plugins/morris/morris.css',                            
+                            '../assets/global/plugins/morris/morris.min.js',
+                            '../assets/global/plugins/morris/raphael-min.js',                            
+                            '../assets/global/plugins/jquery.sparkline.min.js',
+
+                            '../assets/pages/scripts/dashboard.min.js',
+                            'js/controllers/DashboardController.js'
+                        ] 
+                    });
+                }]
+            }
+        })
+
+        // Dashboard
+        .state('home.dashboard', {
             url: "/dashboard.html",
             templateUrl: "views/dashboard.html",            
             data: {pageTitle: 'Admin Dashboard Template'},
@@ -132,8 +157,8 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                             '../assets/global/plugins/morris/raphael-min.js',                            
                             '../assets/global/plugins/jquery.sparkline.min.js',
 
-                            '../assets/pages/scripts/dashboard.min.js',
-                            'js/controllers/DashboardController.js',
+                            //'../assets/pages/scripts/dashboard.min.js',
+                            //'js/controllers/DashboardController.js'
                         ] 
                     });
                 }]
